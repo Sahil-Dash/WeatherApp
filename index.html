@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body class="sunny">
+    <div class="main-content">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="search-container">
+                <input id="search-input" type="text" class="search-input" placeholder="Search for places...">
+                <button class="search-btn" onclick="searchLocation()">🔍</button>
+            </div>
+        </div>
+        
+        <div class="weather-icon sunny-icon" id="weatherIcon"></div>
+        
+        <div class="temperature" id="temperature">26°</div>
+        <div class="location" id="location">London</div>
+        <div class="date-time" id="dateTime">10:36 - Tuesday, 22 Oct '19</div>
+        <div class="condition">
+            <div class="condition-icon" id="conditionIcon"></div>
+            <span id="conditionText">Sunny</span>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3>Quick Search</h3>
+            <div class="location-item" onclick="handleWeatherAPIResponse('Kolkata')">Kolkata</div>
+            <div class="location-item" onclick="handleWeatherAPIResponse('Chennai')">Chennai</div>
+            <div class="location-item" onclick="handleWeatherAPIResponse('Delhi')">Delhi</div>
+            <div class="location-item" onclick="handleWeatherAPIResponse('Mumbai')">Mumbai</div>
+        </div>
+        
+        <div class="sidebar-section">
+            <h3>Weather Details</h3>
+            <div class="weather-detail">
+                <span>Feels like</span>
+                <span id="feelsLike">28°</span>
+            </div>
+            <div class="weather-detail">
+                <span>Humidity</span>
+                <span id="humidity">65%</span>
+            </div>
+            <div class="weather-detail">
+                <span>Wind</span>
+                <span id="wind">12 km/h</span>
+            </div>
+            <div class="weather-detail">
+                <span>Pressure</span>
+                <span id="pressure">1013 mb</span>
+            </div>
+            <div class="weather-detail">
+                <span>Visibility</span>
+                <span id="visibility">10 km</span>
+            </div>
+            <div class="weather-detail">
+                <span>UV Index</span>
+                <span id="uvIndex">6</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Current Weather</h3>
+            <div class="weather-detail">
+                <span>Condition</span>
+                <span id="currentCondition">Clear Sky</span>
+            </div>
+            <div class="weather-detail">
+                <span>Last Updated</span>
+                <span id="lastUpdated">Just now</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="main.js"></script>
+</html>
